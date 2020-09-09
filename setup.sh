@@ -22,13 +22,14 @@ apt update
 
 apt install docker-ce docker-ce-cli containerd.io -y
 
+wget https://atom.io/download/deb
+dpkg -i atom-amd64.deb
+mv atom-amd64.deb ~/Downloads
+
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub io.atom.Atom -y
 flatpak install flathub com.jetbrains.PyCharm-Community -y
 flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
-
-snap install docker postman
 
 # Cleanup
 
